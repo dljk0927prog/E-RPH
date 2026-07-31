@@ -1,0 +1,484 @@
+/* 深色模式CSS变量 */
+:root {
+  --bg-primary: #f5f5f5;
+  --bg-secondary: #ffffff;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --text-muted: #999999;
+  --border-color: #e1e5e9;
+  --shadow-color: rgba(0, 0, 0, 0.08);
+  --accent-color: var(--accent-color);
+  --accent-hover: #7bb3f0;
+  --header-bg: linear-gradient(90deg, #4a90e2, #7bb3f0);
+  --card-border: #4a90e2;
+  --sidebar-bg: #ffffff;
+  --sidebar-text: #374151;
+  --sidebar-hover: #f3f6fb;
+  --sidebar-active: #eaf2ff;
+}
+
+/* 深色模式样式 */
+[data-theme="dark"] {
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #2d2d2d;
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+  --text-muted: #999999;
+  --border-color: #404040;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --accent-color: #64b5f6;
+  --accent-hover: #90caf9;
+  --header-bg: linear-gradient(90deg, #2c3e50, #34495e);
+  --card-border: #64b5f6;
+  --sidebar-bg: #2d2d2d;
+  --sidebar-text: #cccccc;
+  --sidebar-hover: #404040;
+  --sidebar-active: #3d5afe;
+}
+
+/* Admin shared styles: sidebar + utilities */
+.admin-layout { 
+  display: grid; 
+  grid-template-columns: 260px 1fr; 
+  gap: 20px; 
+  max-width: 1400px; 
+  margin: 20px auto; 
+  padding: 0 20px; 
+  align-items: start; 
+  background: var(--bg-primary);
+  transition: background-color 0.3s ease;
+}
+@media (max-width: 980px){ 
+  .admin-layout{ 
+    grid-template-columns: 1fr; 
+    padding: 0 10px;
+    margin: 10px auto;
+  }
+  .admin-sidebar {
+    position: static;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-layout {
+    padding: 0 5px;
+    margin: 5px auto;
+  }
+  .admin-main-card {
+    padding: 15px;
+  }
+  .header {
+    padding: 10px 15px;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  .header > div {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .page-header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  .search-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .search-input, .role-select, .teacher-select {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-main-card {
+    padding: 10px;
+  }
+  .header h1 {
+    font-size: 16px;
+  }
+  .header a, .header .logout-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+  .stat-card {
+    padding: 15px;
+  }
+  .stat-number {
+    font-size: 24px;
+  }
+}
+
+.admin-sidebar { 
+  background: var(--sidebar-bg); 
+  border-radius: 12px; 
+  box-shadow: 0 6px 18px var(--shadow-color); 
+  padding: 16px; 
+  position: sticky; 
+  top: 16px; 
+  align-self: start; 
+  min-height: calc(100vh - 64px); 
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.admin-sidebar .brand { 
+  font-weight: 700; 
+  color: var(--text-primary); 
+  margin-bottom: 10px; 
+  font-size: 16px; 
+}
+.admin-sidebar .menu-title { 
+  font-size: 12px; 
+  color: var(--text-secondary); 
+  margin: 10px 0 6px; 
+  padding-left: 10px; 
+  text-transform: uppercase; 
+  letter-spacing: .08em; 
+}
+.admin-sidebar .menu { 
+  list-style: none; 
+  margin: 0; 
+  padding: 0; 
+}
+.admin-sidebar .menu li{ 
+  margin: 4px 0; 
+}
+.admin-sidebar .menu a{ 
+  display: flex; 
+  align-items: center; 
+  gap: 10px; 
+  padding: 10px 12px; 
+  color: var(--sidebar-text); 
+  text-decoration: none; 
+  border-radius: 10px; 
+  transition: background .18s, color .18s; 
+  font-size: 14px; 
+  font-weight: 500; 
+}
+.admin-sidebar .menu a:hover{ 
+  background: var(--sidebar-hover); 
+}
+.admin-sidebar .menu a.active{ 
+  background: var(--sidebar-active); 
+  color: var(--accent-color); 
+  box-shadow: inset 3px 0 0 var(--accent-color); 
+}
+.admin-sidebar .menu a .icon{ 
+  width: 18px; 
+  height: 18px; 
+  display: inline-block; 
+  color: var(--text-secondary); 
+}
+
+.admin-main-card{ 
+  background: var(--bg-secondary); 
+  border-radius: 12px; 
+  box-shadow: 0 6px 18px var(--shadow-color); 
+  padding: 22px; 
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 统一页面标题和内容字体大小 */
+.admin-layout main h2 { 
+  font-size: 24px; 
+  font-weight: 600; 
+  color: var(--text-primary); 
+  margin-bottom: 16px; 
+}
+.admin-layout main h3 { 
+  font-size: 18px; 
+  font-weight: 600; 
+  color: var(--text-primary); 
+  margin-bottom: 12px; 
+}
+.admin-layout main p { 
+  font-size: 14px; 
+  line-height: 1.5; 
+  color: var(--text-secondary); 
+}
+
+/* 统一表格样式 */
+.admin-layout table { 
+  font-size: 14px; 
+  color: var(--text-primary);
+}
+.admin-layout table th { 
+  font-size: 14px; 
+  font-weight: 600; 
+  color: var(--text-primary);
+  background: var(--bg-primary);
+}
+.admin-layout table td { 
+  font-size: 14px; 
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* 统一按钮样式 */
+.admin-layout .btn, .admin-layout button { 
+  font-size: 14px; 
+  font-weight: 500; 
+}
+.admin-layout .add-user-btn, .admin-layout .add-course-btn { 
+  font-size: 14px; 
+  font-weight: 500; 
+}
+
+/* 统一输入框样式 */
+.admin-layout input, .admin-layout select, .admin-layout textarea { 
+  font-size: 14px; 
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+/* 统一卡片内容样式 - 参考其他页面的丰富设计 */
+.admin-layout .stat-card { 
+  background: var(--bg-secondary); 
+  padding: 25px; 
+  border-radius: 12px; 
+  text-align: center; 
+  box-shadow: 0 4px 15px var(--shadow-color); transition: all 0.3s ease; 
+  border-left: 4px solid var(--card-border);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+}
+.admin-layout .stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px var(--shadow-color);
+}
+.admin-layout .stat-card .stat-number { 
+  font-size: 32px; 
+  font-weight: 700; 
+  color: var(--accent-color);
+  margin-bottom: 8px;
+}
+.admin-layout .stat-card .stat-label { 
+  font-size: 14px; 
+  color: var(--text-secondary); 
+  font-weight: 500;
+}
+
+/* 统一页面头部样式 - 参考其他页面的丰富设计 */
+.header { 
+  background: var(--header-bg); 
+  color: white; 
+  padding: 15px 20px; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  box-shadow: 0 2px 10px var(--shadow-color); 
+  position: relative;
+  z-index: 100;
+  transition: background 0.3s ease;
+}
+.header h1 { 
+  font-size: 20px; 
+  font-weight: 600; 
+  margin: 0; 
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+.header .user-info { 
+  display: flex; 
+  align-items: center; 
+  gap: 15px; 
+  font-size: 14px;
+}
+.header .nav-links {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.header .logout-btn, .header .nav-links a, .header a { 
+  background: rgba(255,255,255,0.2); 
+  color: white; 
+  padding: 8px 16px; 
+  border-radius: 6px; 
+  text-decoration: none; 
+  font-size: 14px; 
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.header .logout-btn:hover, .header .nav-links a:hover, .header a:hover { 
+  background: rgba(255,255,255,0.3); 
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* 统一页面内容区域样式 - 参考其他页面的丰富设计 */
+.page-header { 
+  background: var(--bg-secondary); 
+  padding: 20px; 
+  border-radius: 12px; 
+  margin-bottom: 20px; 
+  box-shadow: 0 4px 15px var(--shadow-color); transition: all 0.3s ease; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  border-left: 4px solid var(--accent-color);
+}
+.page-header h2 { 
+  font-size: 24px; 
+  font-weight: 600; 
+  color: var(--accent-color); 
+  margin: 0; 
+}
+.add-user-btn, .add-course-btn { 
+  background: var(--accent-color); 
+  color: white; 
+  padding: 10px 16px; 
+  text-decoration: none; 
+  border-radius: 6px; 
+  font-size: 14px; 
+  font-weight: 500; 
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px var(--accent-shadow, rgba(74, 144, 226, 0.2));
+}
+.add-user-btn:hover, .add-course-btn:hover { 
+  background: var(--accent-hover); 
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px var(--accent-shadow-hover, rgba(74, 144, 226, 0.3));
+}
+
+/* 统一搜索表单样式 - 参考其他页面的丰富设计 */
+.search-filters { 
+  background: var(--bg-secondary); 
+  padding: 20px; 
+  border-radius: 12px; 
+  margin-bottom: 20px; 
+  box-shadow: 0 4px 15px var(--shadow-color); transition: all 0.3s ease; 
+  border-left: 3px solid var(--accent-hover);
+}
+.search-form { 
+  display: flex; 
+  gap: 15px; 
+  align-items: center; 
+}
+.search-input { 
+  flex: 1; 
+  padding: 10px 12px; 
+  border: 1px solid var(--border-color); 
+  border-radius: 6px; 
+  font-size: 14px; 
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.search-input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px var(--accent-focus, rgba(74, 144, 226, 0.1));
+}
+.role-select, .teacher-select { 
+  padding: 10px 12px; 
+  border: 1px solid var(--border-color); 
+  border-radius: 6px; 
+  min-width: 140px; 
+  font-size: 14px; 
+  background: var(--bg-secondary);
+  transition: border-color 0.2s ease;
+}
+.role-select:focus, .teacher-select:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px var(--accent-focus, rgba(74, 144, 226, 0.1));
+}
+.search-btn { 
+  background: var(--accent-color); 
+  color: white; 
+  border: none; 
+  padding: 10px 16px; 
+  border-radius: 6px; 
+  cursor: pointer; 
+  font-size: 14px; 
+  font-weight: 500; 
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px var(--accent-shadow, rgba(74, 144, 226, 0.2));
+}
+.search-btn:hover { 
+  background: var(--accent-hover); 
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px var(--accent-shadow-hover, rgba(74, 144, 226, 0.3));
+}
+
+/* 统一表格样式 - 参考其他页面的丰富设计 */
+.admin-layout table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  background: var(--bg-secondary);
+}
+.admin-layout table th,
+.admin-layout table td {
+  padding: 14px;
+  border-bottom: 1px solid var(--border-color);
+  text-align: left;
+}
+.admin-layout table th {
+  background: var(--bg-primary);
+  color: var(--accent-color);
+  font-weight: 600;
+  font-size: 14px;
+}
+.admin-layout table tr:hover {
+  background: var(--bg-primary);
+}
+
+/* 统一消息提示样式 */
+.admin-layout .message {
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 14px;
+}
+.admin-layout .message.success {
+  background: var(--success-bg);
+  color: var(--success-text);
+  border: 1px solid var(--success-border);
+  border-left: 4px solid var(--success-bg);
+}
+.admin-layout .message.error {
+  background: var(--error-bg);
+  color: var(--error-text);
+  border: 1px solid var(--error-border);
+  border-left: 4px solid var(--error-bg);
+}
+
+/* 统一无数据提示样式 */
+.admin-layout .no-data {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px var(--shadow-color); transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+/* 统一操作按钮样式 */
+.admin-layout .edit-btn, .admin-layout .delete-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+.admin-layout .edit-btn {
+  background: var(--accent-color);
+  color: white;
+}
+.admin-layout .edit-btn:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+}
+.admin-layout .delete-btn {
+  background: var(--error-bg);
+  color: white;
+}
+.admin-layout .delete-btn:hover {
+  background: var(--error-hover, #d32f2f);
+  transform: translateY(-1px);
+}

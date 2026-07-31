@@ -1,0 +1,361 @@
+E-RPH 系统用户手册
+Electronic Resource Planning for Higher Education User Manual
+
+目录 / Table of Contents
+1. 系统简介 / System Introduction
+2. 快速开始 / Quick Start Guide
+3. 用户角色说明 / User Role Descriptions
+4. 主要功能模块 / Main Functional Modules
+5. 详细使用指南 / Detailed Usage Guide
+6. 系统设置 / System Settings
+7. 常见问题解答 / Frequently Asked Questions
+8. 技术支持 / Technical Support
+
+1. 系统简介 / System Introduction
+
+什么是E-RPH系统？/ What is the E-RPH System?
+E-RPH（Electronic Resource Planning for Higher education）是一个专为高等教育设计的电子资源规划系统。该系统提供完整的教学管理解决方案，包括用户管理、课程管理、教课报告、教案管理等功能。
+
+E-RPH (Electronic Resource Planning for Higher education) is an electronic resource planning system designed specifically for higher education. The system provides a complete teaching management solution, including user management, course management, teaching reports, lesson plan management, and other features.
+
+主要特色 / Key Features
+• 多角色用户管理：支持管理员、教师、学生三种角色 / Multi-role User Management: Supports administrator, teacher, and student roles
+• 课程管理系统：完整的课程创建、分配和管理功能 / Course Management System: Complete course creation, assignment, and management functions
+• 教课报告功能：记录和管理教学活动的详细报告 / Teaching Reports: Record and manage detailed reports of teaching activities
+• 教案管理：上传、编辑和管理教学计划 / Lesson Plan Management: Upload, edit, and manage teaching plans
+• 多语言支持：支持中文和英文界面 / Multi-language Support: Supports Chinese and English interfaces
+• 主题切换：支持浅色和深色主题 / Theme Switching: Supports light and dark themes
+• 响应式设计：支持各种设备访问 / Responsive Design: Supports access from various devices
+• 活动监控：实时监控系统使用情况 / Activity Monitoring: Real-time monitoring of system usage
+• 安全认证：采用安全的用户认证机制 / Secure Authentication: Uses secure user authentication mechanisms
+
+系统要求 / System Requirements
+• PHP 7.4+ / PHP 7.4+
+• MySQL 5.7+ 或 MariaDB 10.2+ / MySQL 5.7+ or MariaDB 10.2+
+• Apache/Nginx Web服务器 / Apache/Nginx Web Server
+• 支持文件上传 / File Upload Support
+
+2. 快速开始 / Quick Start Guide
+
+第一步：系统访问 / Step 1: System Access
+1.打开浏览器，访问系统首页 / Open your browser and visit the system homepage
+（example: https://desmond.synergy-college.org/E-RPH/)
+2.点击"进入系统"按钮 / Click the "Enter System" button
+
+3.系统将跳转到登录页面 / The system will redirect to the login page
+
+
+第二步：用户登录 / Step 2: User Login
+1. 选择您的角色（管理员/教师） / Select your role (Administrator/Teacher)
+2. 输入邮箱地址和密码 / Enter your email address and password
+3. 点击"登录"按钮 / Click the "Login" button
+
+默认账户 / Default Accounts
+• 管理员账户 / Administrator Account: admin@erph.com
+• 默认密码 / Default Password: admin123
+
+第三步：熟悉界面 / Step 3: Familiarize with Interface
+• 仪表板：您的工作中心 / Dashboard: Your work center
+• 功能模块：根据角色显示不同功能 / Functional Modules: Different functions based on role
+• 个人设置：管理账户和偏好 / Personal Settings: Manage account and preferences
+
+3. 用户角色说明 / User Role Descriptions
+
+管理员 (Administrator)
+权限 / Permissions:
+• 用户管理：创建、编辑、删除用户账户 / User Management: Create, edit, delete user accounts
+• 课程管理：创建和管理所有课程 / Course Management: Create and manage all courses
+• 教课报告浏览：查看所有教师的教课报告 / Teaching Reports: View all teachers' teaching reports
+• 系统设置：配置系统参数和偏好 / System Settings: Configure system parameters and preferences
+• 活动监控：查看系统使用统计 / Activity Monitoring: View system usage statistics
+• 背景管理：管理登录页面背景 / Background Management: Manage login page background
+
+教师 (Teacher)
+权限 / Permissions:
+• 我的课程：查看分配的课程 / My Courses: View assigned courses
+• 教课报告：提交和管理教课记录 / Teaching Reports: Submit and manage teaching records
+• 教案管理：创建和管理教学计划 / Lesson Plan Management: Create and manage lesson plans
+• 个人资料：管理个人信息 / Personal Profile: Manage personal information
+
+学生 (Student)
+权限 / Permissions:
+• 课程资料：查看课程相关材料 / Course Materials: View course-related materials
+• 个人资料：管理个人信息 / Personal Profile: Manage personal information
+
+4. 主要功能模块 / Main Functional Modules
+
+4.1 仪表板 / Dashboard
+
+管理员仪表板 / Administrator Dashboard
+功能描述 / Description: 系统主页面，显示整体统计信息和快速操作入口 / Main system page displaying overall statistics and quick action access
+
+主要功能 / Main Features:
+• 用户统计：查看各角色用户数量 / User Statistics: View user count by role
+• 课程统计：查看课程总数和分配情况 / Course Statistics: View total courses and assignments
+• 教课报告统计：查看教课报告提交情况 / Teaching Report Statistics: View teaching report submissions
+• 活动监控：实时查看系统使用情况 / Activity Monitoring: Real-time view of system usage
+• 快速操作：直接访问各功能模块 / Quick Actions: Direct access to functional modules
+
+教师仪表板 / Teacher Dashboard
+功能描述 / Description: 教师工作中心，显示个人教学统计和快速操作 / Teacher work center displaying personal teaching statistics and quick actions
+
+主要功能 / Main Features:
+• 我的课程：查看分配的课程 / My Courses: View assigned courses
+• 教课报告：查看和管理教课记录 / Teaching Reports: View and manage teaching records
+• 教案管理：创建和管理教学计划 / Lesson Plan Management: Create and manage lesson plans
+• 个人统计：查看个人教学数据 / Personal Statistics: View personal teaching data
+
+4.2 用户管理 / User Management
+
+功能描述 / Description: 管理员可以创建、编辑、删除用户账户，管理用户角色和权限 / Administrators can create, edit, delete user accounts, manage user roles and permissions
+
+主要功能 / Main Features:
+• 添加用户：创建新的用户账户 / Add Users: Create new user accounts
+• 编辑用户：修改用户信息和权限 / Edit Users: Modify user information and permissions
+• 删除用户：删除不需要的用户账户 / Delete Users: Remove unnecessary user accounts
+• 用户搜索：按姓名或邮箱搜索用户 / User Search: Search users by name or email
+• 角色筛选：按角色筛选用户列表 / Role Filter: Filter user list by role
+
+使用步骤 / Usage Steps:
+1.进入用户管理页面 / Access the User Management page
+
+2.点击"添加用户"创建新用户 / Click "Add User" to create new users
+
+3.填写用户信息（姓名、邮箱、密码、角色）/ Fill in user information (name, email, password, role)
+
+4. 点击"创建用户"完成添加 / Click "Create User" to complete addition
+
+4.3 课程管理 / Course Management
+
+功能描述 / Description: 创建和管理课程，分配教师，设置课程信息 / Create and manage courses, assign teachers, set course information
+
+主要功能 / Main Features:
+• 创建课程：添加新的课程 / Create Courses: Add new courses
+• 编辑课程：修改课程信息 / Edit Courses: Modify course information
+• 删除课程：删除不需要的课程 / Delete Courses: Remove unnecessary courses
+• 分配教师：为课程分配授课教师 / Assign Teachers: Assign teaching teachers to courses
+• 课程搜索：按课程名称或描述搜索 / Course Search: Search by course name or description
+
+使用步骤 / Usage Steps:
+1.进入课程管理页面 / Access the Course Management page
+
+2.点击"添加课程"创建新课程 / Click "Add Course" to create new courses
+
+3.填写课程信息（名称、描述）/ Fill in course information (name, description)
+
+4. 选择授课教师 / Select teaching teachers
+5. 点击"创建课程"完成添加 / Click "Create Course" to complete addition
+
+4.4 教课报告 / Teaching Reports
+
+功能描述 / Description: 记录和管理教学活动，包括出勤、教学内容、学生表现等 / Record and manage teaching activities, including attendance, teaching content, student performance, etc.
+
+主要功能 / Main Features:
+• 提交报告：记录每日教学情况 / Submit Reports: Record daily teaching situations
+• 查看报告：浏览历史教课记录 / View Reports: Browse historical teaching records
+• 编辑报告：修改已提交的报告 / Edit Reports: Modify submitted reports
+• 删除报告：删除不需要的记录 / Delete Reports: Remove unnecessary records
+• 报告统计：查看教课数据统计 / Report Statistics: View teaching data statistics
+注意/Note : 管理员可查看所有人的报告，老师仅上传报告/Administrators can view all teachers’reports, teachers can only upload reports
+
+使用步骤 / Usage Steps:
+1.进入教课报告页面 / Access the Teaching Reports page
+Admin:
+
+
+
+
+Teachers:
+
+2.点击"添加报告"创建新记录 / Click "Add Report" to create new records
+3. 填写教学信息（课程、日期、时间、备注）/ Fill in teaching information (course, date, time, notes)
+4. 选择出勤状态 / Select attendance status
+5. 点击"保存"完成提交 / Click "Save" to complete submission
+
+4.5 活动监控 / Activity Monitor
+
+功能描述 / Description: 实时监控系统活动，查看用户操作日志和统计数据 / Real-time monitoring of system activities, view user operation logs and statistics
+
+主要功能 / Main Features:
+• 用户活动：查看用户登录和操作记录 / User Activities: View user login and operation records
+• 教课活动：监控教课报告提交情况 / Teaching Activities: Monitor teaching report submissions
+• 系统统计：查看系统使用统计 / System Statistics: View system usage statistics
+• 实时更新：自动刷新活动数据 / Real-time Updates: Automatically refresh activity data
+• 数据同步：同步教课数据到监控系统 / Data Sync: Sync teaching data to monitoring system
+
+4.6 系统设置 / System Settings
+
+功能描述 / Description: 配置系统参数和个人偏好设置 / Configure system parameters and personal preference settings
+
+主要功能 / Main Features:
+• 语言设置：切换界面语言（中文/英文）/ Language Settings: Switch interface language (Chinese/English)
+• 主题设置：切换界面主题（浅色/深色）/ Theme Settings: Switch interface theme (Light/Dark)
+• 背景管理：自定义登录页面背景 / Background Management: Customize login page background
+• 个人资料：管理个人信息和头像 / Personal Profile: Manage personal information and avatar
+• 密码管理：修改登录密码 / Password Management: Change login password
+
+5. 详细使用指南 / Detailed Usage Guide
+
+5.1 登录系统 / System Login
+
+步骤 / Steps:
+1. 访问系统首页 / Visit the system homepage
+2. 点击"进入系统"按钮 / Click "Enter System" button
+
+3. 选择用户角色（管理员/教师）/ Select user role (Administrator/Teacher)
+4. 输入邮箱地址和密码 / Enter email address and password
+
+5. 点击"登录"按钮 / Click "Login" button
+
+注意事项 / Notes:
+• 确保使用正确的邮箱地址和密码 / Ensure correct email address and password
+• 首次登录后建议修改默认密码 / Recommend changing default password after first login
+• 如忘记密码，请联系系统管理员 / Contact system administrator if password is forgotten
+
+5.2 用户管理操作 / User Management Operations
+
+添加用户 / Adding Users:
+1.进入用户管理页面 / Access User Management page
+2.点击"添加用户"按钮 / Click "Add User" button
+
+3. 填写用户信息：
+   - 姓名 / Name
+   - 邮箱 / Email
+   - 密码 / Password
+   - 确认密码 / Confirm Password
+   - 角色 / Role
+
+4. 点击"创建用户"完成 / Click "Create User" to complete
+
+编辑用户 / Editing Users:
+1. 在用户列表中找到目标用户 / Find target user in user list
+2. 点击"编辑"按钮 / Click "Edit" button
+
+3.修改用户信息 / Modify user information
+
+4. 点击"更新用户信息"保存 / Click "Update User Information" to save
+
+删除用户 / Deleting Users:
+1. 在用户列表中找到目标用户 / Find target user in user list
+2. 点击"删除"按钮 / Click "Delete" button
+
+3. 确认删除操作 / Confirm deletion operation
+4. 用户将被永久删除 / User will be permanently deleted
+
+5.3 课程管理操作 / Course Management Operations
+
+创建课程 / Creating Courses:
+1. 进入课程管理页面 / Access Course Management page
+2. 点击"添加课程"按钮 / Click "Add Course" button
+
+3. 填写课程信息：
+   - 课程名称 / Course Name
+   - 课程描述 / Course Description
+   - 授课教师 / Teaching Teachers
+
+4. 点击"创建课程"完成 / Click "Create Course" to complete
+
+编辑课程 / Editing Courses:
+1.在课程列表中找到目标课程 / Find target course in course list
+2.点击"编辑"按钮 / Click "Edit" button
+
+3.修改课程信息 / Modify course information
+
+4. 点击"更新课程"保存 / Click "Update Course" to save
+
+
+5. 系统设置 / System Settings
+
+5.1 语言设置 / Language Settings
+
+切换语言 / Switching Language:
+1.点击页面右上角的语言切换按钮 / Click language switch button in top right corner
+
+2.选择"中文"或"English" / Select "Chinese" or "English"
+
+3. 页面将自动刷新并应用新语言 / Page will automatically refresh and apply new language
+
+支持的语言 / Supported Languages:
+• 中文（简体）/ Chinese (Simplified)
+• English（英语）/ English
+
+5.2 个人资料管理 / Personal Profile Management
+
+编辑个人资料 / Editing Personal Profile:
+1.点击页面右上角的头像 / Click avatar in top right corner
+2.选择"个人资料" / Select "Personal Profile"
+
+3. 修改个人信息：
+   - 姓名 / Name
+   - 邮箱 / Email
+   - 头像 / Avatar
+
+4. 点击"更新个人信息"保存 / Click "Update Personal Information" to save
+
+修改密码 / Changing Password:
+1. 进入个人资料页面 / Access Personal Profile page
+2. 点击"修改密码" / Click "Change Password"
+3. 输入当前密码和新密码 / Enter current password and new password
+4. 点击"更改密码"完成 / Click "Change Password" to complete
+
+7. 常见问题解答 / Frequently Asked Questions
+
+Q: 如何获取系统访问权限？/ How to get system access?
+A: 请联系系统管理员创建账户，管理员会为您分配用户名和初始密码。/ Please contact the system administrator to create an account. The administrator will assign you a username and initial password.
+
+Q: 忘记密码怎么办？/ What if I forget my password?
+A: 请联系系统管理员重置密码。/ Please contact the system administrator to reset your password.
+
+Q: 如何切换语言？/ How to switch language?
+A: 点击页面右上角的语言切换按钮，选择您偏好的语言。/ Click the language switch button in the top right corner and select your preferred language.
+
+Q: 如何切换主题？/ How to switch theme?
+A: 点击页面右上角的主题切换按钮，在浅色和深色模式间切换。/ Click the theme switch button in the top right corner to switch between light and dark modes.
+
+Q: 教课报告和教案有什么区别？/ What's the difference between teaching reports and lesson plans?
+A: 教课报告记录实际的教学活动，包括出勤、时间等；教案是教学计划，包括教学目标、材料等。/ Teaching reports record actual teaching activities including attendance and time; lesson plans are teaching plans including learning objectives and materials.
+
+Q: 如何查看我的教课统计？/ How to view my teaching statistics?
+A: 登录后进入仪表板，可以查看个人教课统计信息。/ After logging in, go to the dashboard to view personal teaching statistics.
+
+Q: 系统支持哪些文件格式？/ What file formats does the system support?
+A: 系统支持常见的图片格式（JPG、PNG、GIF、WebP）用于头像上传。/ The system supports common image formats (JPG, PNG, GIF, WebP) for avatar uploads.
+
+Q: 如何联系技术支持？/ How to contact technical support?
+A: 如遇到技术问题，请联系系统管理员或查看系统内帮助文档。/ If you encounter technical issues, please contact the system administrator or check the help documentation within the system.
+
+8. 技术支持 / Technical Support
+
+联系方式 / Contact Information
+• 系统内帮助：点击页面右上角的"用户手册"按钮 / In-system Help: Click "User Manual" button in top right corner
+• 在线帮助：查看本用户手册 / Online Help: Check this user manual
+• 技术支持：联系系统管理员 / Technical Support: Contact system administrator
+
+系统维护 / System Maintenance
+• 定期备份：系统会自动备份重要数据 / Regular Backup: System automatically backs up important data
+• 安全更新：定期更新系统安全补丁 / Security Updates: Regular security patch updates
+• 性能监控：实时监控系统性能 / Performance Monitoring: Real-time system performance monitoring
+
+最佳实践 / Best Practices
+1. 定期修改密码 / Change password regularly
+2. 及时提交教课报告 / Submit teaching reports promptly
+3. 合理组织教案结构 / Organize lesson plan structure properly
+4. 定期检查系统通知 / Check system notifications regularly
+5. 保持浏览器更新 / Keep browser updated
+
+更新日志 / Update Log
+v1.0.0 (2024年)
+• 初始版本发布 / Initial version release
+• 支持用户管理、课程管理、教课报告、教案管理 / Support user management, course management, teaching reports, lesson plan management
+• 支持多语言界面 / Support multi-language interface
+• 支持主题切换 / Support theme switching
+• 支持活动监控 / Support activity monitoring
+
+感谢使用E-RPH系统！/ Thank you for using the E-RPH System!
+
+如有任何问题或建议，请随时联系技术支持团队。/ If you have any questions or suggestions, please contact the technical support team at any time.
+
+---
+文档版本 / Document Version: 1.0.0
+最后更新 / Last Updated: 2024年
+系统版本 / System Version: E-RPH v1.0.0

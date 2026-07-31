@@ -1,0 +1,118 @@
+/* style.css — 深红 ↔ 白 渐变配色，简洁响应式 */
+:root{
+  --deep-blue: #4a90e2;
+  --light-blue: #7bb3f0;
+  --bg1: linear-gradient(135deg, #fff 0%, #f0f8ff 35%, #e6f3ff 60%);
+  --card-gradient: linear-gradient(180deg, #fff,#fff);
+}
+
+*{box-sizing:border-box;font-family:Inter, "Helvetica Neue", Arial, sans-serif}
+body{
+  margin:0;
+  background: linear-gradient(180deg, #fff 0%, #f8fcff 40%, #fff 100%);
+  color:#222;
+  min-height:100vh;
+}
+
+/* header */
+.site-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px 20px;
+  background: linear-gradient(90deg, var(--deep-blue), #7bb3f0);
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+.site-header .brand a{
+  font-weight:700;color:#fff;text-decoration:none;font-size:20px;
+}
+.main-nav a{ color:rgba(255,255,255,0.95); margin-left:14px; text-decoration:none; font-weight:600; }
+.main-nav a.logout{ opacity:0.9; font-size:14px }
+
+/* container */
+.container{ max-width:1100px;margin:28px auto;padding:0 16px; }
+
+/* card */
+.card{
+  background: var(--card-gradient);
+  padding:16px;border-radius:12px;margin-bottom:18px;
+  box-shadow: 0 6px 18px rgba(139,0,0,0.06);
+  border: 1px solid rgba(139,0,0,0.06);
+}
+
+/* forms & table */
+label{ display:block;margin-bottom:8px; font-size:14px }
+label input, label select, label textarea{ display:block;margin-top:6px;padding:8px;border-radius:6px;border:1px solid #ddd;width:100%;max-width:420px }
+.btn{
+  background: linear-gradient(180deg, var(--deep-blue), #7bb3f0);
+  color:#fff;padding:10px 14px;border-radius:10px;border:none;margin-top:10px;cursor:pointer;font-weight:700;
+}
+.table{ width:100%; border-collapse:collapse; margin-top:10px }
+.table th, .table td{ border-bottom:1px solid #f0eaea;padding:10px;text-align:left;font-size:14px }
+.table th{ background:rgba(139,0,0,0.06) }
+
+/* messages / alerts */
+.success{ background:#e9f8ee;border-left:4px solid #1fa775;padding:10px;margin-bottom:12px;border-radius:6px }
+.error{ background:#f0f8ff;border-left:4px solid #4a90e2;padding:10px;margin-bottom:12px;border-radius:6px }
+
+/* login page style */
+.login-page{ display:flex; align-items:center; justify-content:center; height:100vh; background: linear-gradient(135deg,#fff 10%, #f0f8ff 60%);}
+.login-card{ background:#fff; padding:28px;border-radius:14px;width:360px; box-shadow:0 20px 60px rgba(0,0,0,0.08);}
+.login-card h2{ margin-top:0; color:var(--deep-blue) }
+.login-footer{ margin-top:20px; text-align:center; font-size:14px; color:#666; }
+
+/* dashboard */
+.dashboard{ display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:20px; }
+.quick-actions{ display:flex; flex-wrap:wrap; gap:10px; }
+.quick-actions .btn{ margin-top:0; }
+
+/* error pages */
+.error-page{ 
+  display:flex; 
+  align-items:center; 
+  justify-content:center; 
+  height:100vh; 
+  background: linear-gradient(135deg,#fff 10%, #f0f8ff 60%);
+}
+.error-content{ 
+  text-align:center; 
+  background:#fff; 
+  padding:40px; 
+  border-radius:16px; 
+  box-shadow:0 20px 60px rgba(0,0,0,0.08);
+}
+.error-content h1{ 
+  font-size:72px; 
+  margin:0; 
+  color:var(--deep-red); 
+  font-weight:900;
+}
+.error-content h2{ 
+  margin:10px 0 20px; 
+  color:#333;
+}
+.error-content p{ 
+  margin-bottom:30px; 
+  color:#666; 
+  font-size:16px;
+}
+
+/* footer */
+.site-footer{ 
+  background:rgba(139,0,0,0.05); 
+  padding:20px 0; 
+  margin-top:40px; 
+  text-align:center; 
+  color:#666;
+}
+
+/* responsive */
+@media (max-width:720px){
+  .main-nav{ display:none }
+  .container{ padding:12px }
+  .dashboard{ grid-template-columns:1fr; }
+  .error-content h1{ font-size:48px; }
+  .error-content{ padding:20px; }
+  .login-card{ width:90%; max-width:360px; padding:20px; }
+}

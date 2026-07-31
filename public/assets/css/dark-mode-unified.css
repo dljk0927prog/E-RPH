@@ -1,0 +1,232 @@
+/* 统一深色模式样式 - 确保所有页面与管理员仪表板完全一致 */
+
+/* 深色模式CSS变量 - 与admin_dashboard.php完全一致 */
+[data-theme="dark"] {
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #2d2d2d;
+    --text-primary: #ffffff;
+    --text-secondary: #e0e0e0;
+    --text-muted: #b0b0b0;
+    --border-color: #404040;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --accent-color: #4a90e2;
+    --accent-hover: #7bb3f0;
+    --header-bg: linear-gradient(90deg, #4a90e2, #7bb3f0);
+    --card-border: #4a90e2;
+    --success-bg: #22543d;
+    --success-text: #9ae6b4;
+    --success-border: #38a169;
+    --error-bg: #742a2a;
+    --error-text: #feb2b2;
+    --error-border: #e53e3e;
+    --warning-bg: #744210;
+    --warning-text: #faf089;
+    --warning-border: #d69e2e;
+    --card-hover-bg: #2a2f35;
+    --card-hover-shadow: rgba(0, 0, 0, 0.5);
+    --gradient-start: #1e3a8a;
+    --gradient-end: #3b82f6;
+}
+
+/* 深色模式下的页面整体样式 */
+[data-theme="dark"] body {
+    background: linear-gradient(135deg, var(--bg-primary), #1a1f24);
+    background-attachment: fixed;
+    color: var(--text-primary);
+}
+
+/* 深色模式下的表单容器 */
+[data-theme="dark"] .form-container {
+    background: var(--bg-secondary) !important;
+    border: 1px solid var(--border-color) !important;
+    box-shadow: 0 4px 20px var(--shadow-color) !important;
+    color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .form-container:hover {
+    background: var(--card-hover-bg) !important;
+    box-shadow: 0 6px 25px var(--card-hover-shadow) !important;
+    border-color: var(--accent-color) !important;
+}
+
+/* 深色模式下的表单元素 */
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-group select,
+[data-theme="dark"] .form-group textarea {
+    background: var(--bg-primary) !important;
+    color: var(--text-primary) !important;
+    border: 2px solid var(--border-color) !important;
+}
+
+[data-theme="dark"] .form-group input:focus,
+[data-theme="dark"] .form-group select:focus,
+[data-theme="dark"] .form-group textarea:focus {
+    border-color: var(--accent-color) !important;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2) !important;
+}
+
+/* 深色模式下的标签 */
+[data-theme="dark"] .form-group label {
+    color: var(--text-primary) !important;
+}
+
+/* 深色模式下的复选框组 */
+[data-theme="dark"] .checkbox-item {
+    background: rgba(74, 144, 226, 0.1) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .checkbox-item:hover {
+    background: rgba(74, 144, 226, 0.2) !important;
+    border-color: var(--accent-color) !important;
+}
+
+[data-theme="dark"] .checkbox-item label {
+    color: var(--text-primary) !important;
+}
+
+/* 深色模式下的按钮 */
+[data-theme="dark"] .btn {
+    background: linear-gradient(135deg, var(--accent-color), var(--accent-hover)) !important;
+    color: white !important;
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3) !important;
+}
+
+[data-theme="dark"] .btn:hover {
+    background: linear-gradient(135deg, var(--accent-hover), var(--accent-color)) !important;
+    box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4) !important;
+}
+
+/* 深色模式下的消息 */
+[data-theme="dark"] .message.success {
+    background: var(--success-bg) !important;
+    color: var(--success-text) !important;
+    border: 1px solid var(--success-border) !important;
+}
+
+[data-theme="dark"] .message.error {
+    background: var(--error-bg) !important;
+    color: var(--error-text) !important;
+    border: 1px solid var(--error-border) !important;
+}
+
+/* 深色模式下的返回链接 */
+[data-theme="dark"] .back-link {
+    color: var(--accent-color) !important;
+}
+
+[data-theme="dark"] .back-link:hover {
+    background: rgba(74, 144, 226, 0.2) !important;
+}
+
+/* 深色模式下的密码提示 */
+[data-theme="dark"] .password-note {
+    color: var(--text-muted) !important;
+}
+
+/* 深色模式下的响应式设计 */
+@media (max-width: 768px) {
+    [data-theme="dark"] .form-container {
+        background: var(--bg-secondary) !important;
+        border: 1px solid var(--border-color) !important;
+    }
+}
+
+/* 深色模式下的特殊效果 */
+[data-theme="dark"] .form-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+    opacity: 0.8;
+    border-radius: 12px 12px 0 0;
+}
+
+/* 深色模式下的输入框占位符 */
+[data-theme="dark"] .form-group input::placeholder,
+[data-theme="dark"] .form-group textarea::placeholder {
+    color: var(--text-muted) !important;
+    opacity: 0.7;
+}
+
+/* 深色模式下的选择框选项 */
+[data-theme="dark"] .form-group select option {
+    background: var(--bg-primary) !important;
+    color: var(--text-primary) !important;
+}
+
+/* 深色模式下的滚动条 */
+[data-theme="dark"] ::-webkit-scrollbar {
+    width: 8px;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-color);
+}
+
+/* 深色模式下的焦点轮廓 */
+[data-theme="dark"] *:focus {
+    outline: 2px solid var(--accent-color) !important;
+    outline-offset: 2px !important;
+}
+
+/* 深色模式下的动画效果 */
+[data-theme="dark"] .form-container,
+[data-theme="dark"] .btn,
+[data-theme="dark"] .checkbox-item {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* 深色模式下的阴影效果 */
+[data-theme="dark"] .form-container {
+    box-shadow: 
+        0 4px 20px var(--shadow-color),
+        0 0 0 1px var(--border-color),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05) !important;
+}
+
+/* 深色模式下的悬停效果增强 */
+[data-theme="dark"] .form-container:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 
+        0 8px 30px var(--card-hover-shadow),
+        0 0 0 1px var(--accent-color),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+}
+
+/* 深色模式下的按钮悬停效果增强 */
+[data-theme="dark"] .btn:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 
+        0 6px 20px rgba(74, 144, 226, 0.4),
+        0 0 0 1px var(--accent-color) !important;
+}
+
+/* 深色模式下的复选框悬停效果增强 */
+[data-theme="dark"] .checkbox-item:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 
+        0 4px 12px rgba(74, 144, 226, 0.2),
+        0 0 0 1px var(--accent-color) !important;
+}
+
+/* 深色模式下的返回链接悬停效果增强 */
+[data-theme="dark"] .back-link:hover {
+    transform: translateX(-4px) !important;
+    box-shadow: 
+        0 2px 8px rgba(74, 144, 226, 0.2),
+        0 0 0 1px var(--accent-color) !important;
+}
