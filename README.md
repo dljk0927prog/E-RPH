@@ -156,9 +156,6 @@ Change the default password after first login when deploying beyond localhost.
 |---|---|
 | ![Course Management](assets/screenshots/course_management.png) | ![Teaching Reports](assets/screenshots/teaching_reports.png) |
 
-| Activity Monitor |
-|---|
-| ![Activity Monitor](assets/screenshots/activity_monitor.png) |
 
 ---
 
