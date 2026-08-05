@@ -164,7 +164,7 @@ Change the default password after first login when deploying beyond localhost.
 
 ## 🎬 Demo Video
 
-Demo video coming soon.
+👉 **[Watch Demo Video](https://drive.google.com/file/d/11BGvhNd-eL_E2S0pQY_tZXVz4_2e6wdH/view?usp=sharing)**
 
 ---
 
@@ -172,6 +172,7 @@ Demo video coming soon.
 
 | Resource | Link |
 |---|---|
+| 🎬 Demo Video | [Watch](https://drive.google.com/file/d/11BGvhNd-eL_E2S0pQY_tZXVz4_2e6wdH/view?usp=sharing) |
 | 💻 Local (XAMPP) | `http://localhost/E-RPH/` |
 | 📦 GitHub Repository | [dljk0927prog/E-RPH](https://github.com/dljk0927prog/E-RPH) |
 
